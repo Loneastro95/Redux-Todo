@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import {StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 const TodoItem = (props) => {
@@ -17,7 +17,7 @@ const TodoItem = (props) => {
 
   return (
     <View key={item.id} style={styles.card}>
-      <Textarea
+      <TextInput
         ref={inputRef}
         defaultValue={item.item}
         onKeyPress={(e) => {
